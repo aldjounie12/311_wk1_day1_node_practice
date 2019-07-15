@@ -47,11 +47,13 @@ describe('Dates module', () => {
 
   test('Return today\'s day - ex. Monday', () => {
     const weekdays = [
+      'Sunday',
       'Monday',
       'Tuesday',
       'Wednesday',
       'Thursday',
-      'Friday'
+      'Friday',
+      'Saturday'
     ]
 
     const day = dates.today()
@@ -60,7 +62,7 @@ describe('Dates module', () => {
 
   test('Return today\'s date in the format: May 29, 2019', () => {
     const cal = dates.calendar()
-    expect(cal).toMatch(/^[A-z]{3} [0-9]{2}, [0-9]{4}$/)
+    expect(cal).toMatch(/^[A-z]{4} [0-9]{2}, [0-9]{4}$/)
   })
 
   test('Return the current time in the format: 03:21:51 PM', () => {
